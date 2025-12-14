@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supermercado Baratinho</title>
+  <link rel="stylesheet" href="./stylesheet.css">
+  <script src="./caixa.js" defer></script>
+</head>
+<body>
+  <div class="inf_supermercado">
+    <h1 class="titulo">SUPERMERCADO BARATINHO</h1>
+  </div>
+
+  <div class="container">
+    <!-- Cadastro de produto -->
+    <div class="cadastro">
+      <h2 class="titulo_cadastra">Cadastro de produto</h2>
+      <div class="card">
+        <input class="dados_prod" id="nomeProd" type="text" placeholder="Nome do produto">
+        <input class="dados_prod" id="valorProd" type="number" placeholder="Valor do produto">
+        <input class="dados_prod" id="codigoProd" type="text" placeholder="Código do produto">
+        <select class="dados_prod" id="tipoProd">
+          <option value="outro">Outros</option>
+          <option value="alimentacao">Alimentação</option>
+          <option value="carro">Carro</option>
+          <option value="limpeza">Limpeza</option>
+        </select>
+        <input class="dados_prod" id="dataProd" type="text" placeholder="Data de Validade" style="display:none;">
+
+        <div class="botoes">
+          <button id="adicionarProd">ADICIONAR PRODUTO</button>
+          <button id="removerProd">REMOVER PRODUTO</button>
+          <button id="aplicaDesconto">APLICAR DESCONTO</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lista de produtos -->
+    <div class="lista">
+      <h2 class="titulo_lista">Lista de produtos</h2>
+      <table class="tabela_produtos">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody id="lista_prod">
+          <!-- Produtos vão aparecer aqui -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="valorCaixa">
+    <h2 id="valorTotal">Valor Total: R$ 0.00</h2>
+    <h2 id="valorFinal">Valor Final: R$ 0.00</h2>
+    <p class="direitos"><strong><em>© 2025 Supermercado Baratinho. Todos os direitos reservados.</em></strong></p>
+  </footer>
+</body>
+</html>
